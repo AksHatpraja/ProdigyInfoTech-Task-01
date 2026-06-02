@@ -1,56 +1,71 @@
-ProdigyInfoTech-Task-01
-House Prices - Advanced Regression Techniques
- **Project Overview: Residential Property Price Prediction**
+**Prodigy Infotech - Mechine Learning Internship**  
+**Task 01 : House Prices - Advanced Regression Techniques**
 
-**1. Executive Summary**
+### Project Overview
+This project focuses on building a predictive model to estimate residential property prices in Ames, Iowa, using the famous Ames Housing Dataset. The goal is to develop a robust regression model that accurately predicts `SalePrice` based on various structural, location, and quality features of houses.
 
-The primary objective of this project is to develop a robust machine learning model capable of accurately predicting the sale prices of residential properties. By analyzing historical housing data, this project aims to identify the key features that drive property value and establish a baseline predictive model using Multiple Linear Regression. This tool can provide valuable insights for real estate valuation, investment analysis, and market trend assessment.
+By working on this end-to-end project, I gained hands-on experience in real-world data science workflows — from data exploration and preprocessing to model training, evaluation, and deployment-ready predictions.
 
-**2. Dataset Context**
+### Skills Developed
+- **Data Loading & Exploratory Data Analysis (EDA)**: Understanding dataset structure, handling missing values, and visualizing feature distributions and relationships.
+- **Feature Engineering & Preprocessing**: Handling numerical and categorical variables, imputing missing data (mean for numeric, mode for categorical).
+- **Machine Learning Modeling**: Implementing Linear Regression as a baseline model using scikit-learn.
+- **Model Evaluation**: Using metrics like MAE, MSE, and R² Score; visualizing predictions vs actual values and residual analysis.
+- **Prediction & Submission**: Generating predictions on the test set and creating a submission file in the required format.
+- **Data Visualization**: Using Matplotlib and Seaborn for pair plots, scatter plots, residual plots, and distribution analysis.
 
-The project utilizes a comprehensive dataset detailing the sale of individual residential properties within the Ames city limits. The dataset contains a rich set of explanatory variables describing various aspects of residential homes, encompassing both categorical and continuous data. Key dimensions of the data include:
+### Tools & Technologies Used
+- **Python**
+- **Pandas** & **NumPy** (Data manipulation)
+- **Matplotlib** & **Seaborn** (Visualization)
+- **Scikit-learn** (Model training & evaluation)
+- **Jupyter Notebook** / VS Code
 
-* **Property Characteristics:** Size metrics such as lot area, above-grade living area, and the number of bedrooms and bathrooms.
+### Project Workflow
+1. **Data Loading**  
+   Loaded `train.csv` and `test.csv` files containing 80+ features describing house attributes.
 
+2. **Data Preprocessing**  
+   - Identified and filled missing values appropriately.
+   - Selected key predictive features: `GrLivArea`, `BedroomAbvGr`, `FullBath`, `HalfBath`, `TotRmsAbvGrd`.
 
-* **Location and Zoning:** Physical locations (neighborhoods) and general zoning classifications (e.g., Residential Low Density, Commercial).
+3. **Exploratory Data Analysis**  
+   - Created pair plots to understand feature relationships.
+   - Analyzed distributions and correlations with `SalePrice`.
 
+4. **Model Training**  
+   - Split training data into train/validation sets.
+   - Trained a **Linear Regression** model.
 
-* **Structural Details:** The type of dwelling, style of the house, and overall material and finish quality.
+5. **Model Evaluation**  
+   - Evaluated on validation set using MAE, MSE, and R².
+   - Plotted Actual vs Predicted values and Residual plots to assess model performance.
 
+6. **Prediction & Submission**  
+   - Generated predictions on the test dataset.
+   - Saved results to `submission.csv` in the required Kaggle format.
 
+### Key Results
+- **Example Prediction**: A house with 2000 sq ft living area, 3 bedrooms, 2 full baths, 1 half bath, and 7 total rooms above grade was predicted at **$240,896**.
 
- **3. Methodology**
+- Strong linear relationship observed between `GrLivArea` and `SalePrice`.
+- Residual analysis shows reasonable model fit for a baseline linear model.
 
-The project workflow follows industry-standard data science practices to ensure reliable and reproducible results:
-
-* **Data Preprocessing:**
-* Implemented defensive data handling to manage missing values safely.
-* Applied mean imputation for missing continuous/numeric variables and mode imputation for categorical/string variables.
-
-
-* **Feature Selection:**
-* Established a focused baseline using highly correlated, interpretable predictors: Above-ground living area (`GrLivArea`), number of bedrooms (`BedroomAbvGr`), full bathrooms (`FullBath`), half bathrooms (`HalfBath`), and total rooms above ground (`TotRmsAbvGrd`).
-
-
-* **Model Training:**
-* Split the dataset into training and validation sets (80/20 split) to ensure unbiased model evaluation.
-* Trained a standard Linear Regression model to capture the linear relationships between the selected physical characteristics and the final `SalePrice`.
-
-
-* **Model Evaluation & Diagnostics:**
-* Evaluated model performance using standard regression metrics: Mean Absolute Error (MAE), Mean Squared Error (MSE), and the $R^2$ Score.
-* Generated scatter plots (Actual vs. Predicted) and residual distribution plots to diagnose heteroscedasticity and identify potential outliers.
-
-
-
-**4. Technologies & Tools**
-
-* **Language:** Python
-* **Data Manipulation:** Pandas, NumPy
-* **Machine Learning:** Scikit-Learn (`LinearRegression`, `train_test_split`)
-* **Data Visualization:** Matplotlib, Seaborn
+### Future Improvements
+- Advanced feature engineering (e.g., total square footage, age of house, neighborhood encoding).
+- Trying ensemble models (Random Forest, XGBoost, Gradient Boosting).
+- Hyperparameter tuning and cross-validation.
+- Handling outliers and incorporating more categorical features.
 
 ---
 
-Would you like to expand this overview to include a section on future improvements, such as testing more advanced algorithms (like Random Forest or XGBoost) or adding more complex feature engineering?
+**Repository Structure**
+```
+Prodigy_House_Price_Prediction/
+├── train.csv
+├── test.csv
+├── task1.ipynb          # Main Jupyter Notebook
+├── submission.csv       # Model predictions
+├── data_description.txt # Feature descriptions
+└── README.md
+```
