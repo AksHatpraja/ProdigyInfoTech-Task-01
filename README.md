@@ -1,12 +1,12 @@
-# ProdigyInfoTech-Task-01
+ProdigyInfoTech-Task-01
 House Prices - Advanced Regression Techniques
-## **Project Overview: Residential Property Price Prediction**
+ **Project Overview: Residential Property Price Prediction**
 
-### **1. Executive Summary**
+**1. Executive Summary**
 
 The primary objective of this project is to develop a robust machine learning model capable of accurately predicting the sale prices of residential properties. By analyzing historical housing data, this project aims to identify the key features that drive property value and establish a baseline predictive model using Multiple Linear Regression. This tool can provide valuable insights for real estate valuation, investment analysis, and market trend assessment.
 
-### **2. Dataset Context**
+**2. Dataset Context**
 
 The project utilizes a comprehensive dataset detailing the sale of individual residential properties within the Ames city limits. The dataset contains a rich set of explanatory variables describing various aspects of residential homes, encompassing both categorical and continuous data. Key dimensions of the data include:
 
@@ -20,7 +20,7 @@ The project utilizes a comprehensive dataset detailing the sale of individual re
 
 
 
-### **3. Methodology**
+ **3. Methodology**
 
 The project workflow follows industry-standard data science practices to ensure reliable and reproducible results:
 
